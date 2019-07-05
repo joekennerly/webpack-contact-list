@@ -1,24 +1,22 @@
 {
-  "posts": [
+  "contacts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id":1,
+      "name": "Joe",
+      "phone": "111-222-3333",
+      "address": "123 Main St."
     },
     {
-      "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id":2,
+      "name": "Jim",
+      "phone": "112-223-3334",
+      "address": "123 Sesame St."
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id":3,
+      "name": "George",
+      "phone": "555-223-3334",
+      "address": "321 Woowoo St."
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
