@@ -1,22 +1,39 @@
 {
-  "contacts": [
+  "users": [
     {
       "id":1,
-      "name": "Joe",
-      "phone": "111-222-3333",
-      "address": "123 Main St."
+      "name": "Joe"
     },
     {
       "id":2,
-      "name": "Jim",
-      "phone": "112-223-3334",
-      "address": "123 Sesame St."
+      "name": "Jim"
     },
     {
       "id":3,
-      "name": "George",
-      "phone": "555-223-3334",
-      "address": "321 Woowoo St."
+      "name": "George"
+    }
+  ],
+  "categories": [
+    {
+      "id":1,
+      "name": "Groceries",
+      "userId": 1
+    },
+    {
+      "id":2,
+      "name": "Utilities",
+      "userId": 1
+    },
+    {
+      "id":3,
+      "name": "Car",
+      "userId": 2
+    },
+    {
+      "id":4,
+      "name": "Misc",
+      "userId": 1
     }
   ]
+
 }

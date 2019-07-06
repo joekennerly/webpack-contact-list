@@ -1,33 +1,32 @@
 console.log("Comps loaded");
 
 export const Comps = {
-  container: document.getElementById("container"),
 
-  initializeFormListener(button) {
-    let saveBtn = document.querySelector(button);
-    console.log(saveBtn);
-    // debugger
-
-    saveBtn.addEventListener("click", () => {
-      console.log("button clicked");
-    });
-  },
-
-  formComponent() {
+  dashboard() {
     return `
-    <input type="text" id="name-input" placeholder="name">
-    <input type="text" id="phone-input" placeholder="phone">
-    <input type="text" id="address-input" placeholder="address">
-    <button id="save-btn">Save Contact</button>`;
+    <h1> Tracker </h1>
+    <div id="form-container"></div>
+    <div id="list-container"></div>
+    `
   },
 
-  contactComponent(contactObject) {
+  categoryForm() {
     return `
     <div>
-    <p><b>${contactObject.name}</b></p>
-    <p>Phone: ${contactObject.phone}</p>
-    <p>Address: ${contactObject.address}</p>
-    <button>click</button>
+    <input type="text" id="name-input" placeholder="new cagetory">
+    <button id="save-btn">Create</button>
+    </div>`
+  },
+
+  category(obj) {
+    return `
+    <div class="category">
+    <p><b>${obj.name}Category #${obj.id}</b></p>
+
+    <article class="card-container"></article>
+
+    <button id="edit-${obj.id}">edit</button>
+    <button id="del-${obj.id}">delete</button>
     </div>
   `
   }
