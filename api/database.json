@@ -2,15 +2,15 @@
   "users": [
     {
       "id":1,
-      "name": "Joe"
+      "name": "joe"
     },
     {
       "id":2,
-      "name": "Jim"
+      "name": "jim"
     },
     {
       "id":3,
-      "name": "George"
+      "name": "george"
     }
   ],
   "categories": [
@@ -32,7 +32,7 @@
     {
       "id":4,
       "name": "Misc",
-      "userId": 1
+      "userId": 3
     }
   ]
 

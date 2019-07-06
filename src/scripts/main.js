@@ -5,6 +5,6 @@ import { Comps } from "./components.js";
 import { Act } from "./actions.js";
 import { dom } from "./dom.js";
 
+// On page load
 
-
-dom.displayDashboard()
+dom.displayWelcome()

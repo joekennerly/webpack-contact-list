@@ -2,10 +2,28 @@ console.log("Comps loaded");
 
 export const Comps = {
 
+  welcome() {
+    return `
+    <div id="welcome-page">
+      <header>
+        <h1> Tracker </h1>
+        <div id="login-container">
+          <input id="username-input" type="text" value="joe"/>
+          <button id="login-button">Login</button>
+        </div>
+      </header>
+      <div id="list-container"></div>
+    </div>
+    `
+  },
+
   dashboard() {
     return `
-    <h1> Tracker </h1>
-    <div id="form-container"></div>
+    <header>
+      <h1> Tracker </h1>
+      <div id="form-container"></div>
+      <button id="logout-button">Logout</button>
+    </header>
     <div id="list-container"></div>
     `
   },
@@ -21,12 +39,36 @@ export const Comps = {
   category(obj) {
     return `
     <div class="category">
-    <p><b>${obj.name}Category #${obj.id}</b></p>
+    <p><b>${obj.name} #${obj.id}</b></p>
+    <p>Total:</p>
 
-    <article class="card-container"></article>
+    <article class="card-container">
+    <div class="card">
+      <div>Name: $0.00</div>
+      <div>
+        <button>~</button><button>x</button>
+      </div>
+    </div>
+    <div class="card">
+    <div>Name: $0.00</div>
+      <div>
+        <button>~</button><button>x</button>
+      </div>
+    </div>
+    <div class="card">
+    <div>Name: $0.00</div>
+      <div>
+        <button>~</button><button>x</button>
+      </div>
+    </div>
 
-    <button id="edit-${obj.id}">edit</button>
-    <button id="del-${obj.id}">delete</button>
+    <button>+</button>
+    </article>
+
+    <footer>
+    <button id="edit-${obj.id}" class="btn">edit</button>
+    <button id="del-${obj.id}" class="btn">delete</button>
+    </footer>
     </div>
   `
   }
