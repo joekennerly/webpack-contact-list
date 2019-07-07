@@ -16,10 +16,10 @@ export const dom = {
     // State displays info pertaining only to user
     let state = parseInt(sessionStorage.getItem("activeUser"))
     Act.render("#container", Comps.dashboard());
-    // Append create category form to #form-container
     Act.render("#form-container", Comps.categoryForm());
     dashboardHandler.logout()
     dashboardHandler.loadCategories(state)
-    dashboardHandler.createCategory()
+    dashboardHandler.createCategory(state)
+    dashboardHandler.deleteCategory(state)
   }
 }

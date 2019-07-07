@@ -6,5 +6,5 @@
 import { dom } from "./dom.js";
 
 // On page load
-
-dom.displayWelcome()
+if(!sessionStorage) dom.displayWelcome()
+else dom.displayDashboard()

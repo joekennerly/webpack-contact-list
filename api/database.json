@@ -1,39 +1,38 @@
 {
   "users": [
     {
-      "id":1,
+      "id": 1,
       "name": "joe"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "jim"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "george"
     }
   ],
   "categories": [
     {
-      "id":1,
+      "id": 1,
       "name": "Groceries",
       "userId": 1
     },
     {
-      "id":2,
+      "id": 2,
       "name": "Utilities",
       "userId": 1
     },
     {
-      "id":3,
+      "id": 3,
       "name": "Car",
       "userId": 2
     },
     {
-      "id":4,
+      "id": 4,
       "name": "Misc",
       "userId": 3
     }
   ]
-
 }
