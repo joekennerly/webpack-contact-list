@@ -32,13 +32,10 @@ export const dashboardHandler = {
       if (!category.name) alert("please enter a name for the category")
       else {
         API.postData("categories", category)
-        document.querySelector("#list-container").innerHTML = ""
-        // API.getData("categories")
-        //   .then(categories => {
-        //   console.log(categories)
-        // })
-        this.loadCategories(state)
-        // Act.plus("#list-container", Comps.category(category))
+          .then(() => {
+            document.querySelector("#list-container").innerHTML = ""
+            this.loadCategories(state)
+        })
       }
     })
   },
@@ -51,20 +48,11 @@ export const dashboardHandler = {
         console.log(event.target.id)
         id = id.split("-")
         API.deleteData("categories", id[1])
-        document.querySelector("#list-container").innerHTML = ""
-        this.loadCategories(state)
+          .then(() => {
+            document.querySelector("#list-container").innerHTML = ""
+            this.loadCategories(state)
+        })
       }
     })
   }
-  // document.querySelector("#listContainer").addEventListener("click", event => {
-  //   let id = event.target.id
-  //   if (event.target.id.startsWith("edit-")){
-  //     let eventName = document.querySelector("#event-name").value;
-  //     let eventDate = document.querySelector("#event-date").value;
-  //     let eventLocation = document.querySelector("#event-location").value;
-  //     const card = this.newEvent(eventName, eventDate, eventLocation)
-  //     id = id.split("-")
-  //     API.editCard("events", id[1], card)
-  //   }
-  // })
 }
