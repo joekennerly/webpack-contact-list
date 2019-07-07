@@ -32,13 +32,20 @@ export const Comps = {
     return `
     <div>
     <input type="text" id="name-input" placeholder="new cagetory">
-    <button id="save-btn">Create</button>
+    <button class="btn" id="save-btn">Create</button>
+    </div>`
+  },
+  categoryEditForm() {
+    return `
+    <div>
+    <input type="text" id="name-edit" placeholder="enter new name" autofocus>
+    <button class="btn" id="save-edit">Change</button>
     </div>`
   },
 
   category(obj) {
     return `
-    <div class="category">
+    <div class="category" id="category-${obj.id}">
     <p><b>${obj.name} #${obj.id}</b></p>
     <p>Total:</p>
 

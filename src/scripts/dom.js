@@ -21,5 +21,6 @@ export const dom = {
     dashboardHandler.loadCategories(state)
     dashboardHandler.createCategory(state)
     dashboardHandler.deleteCategory(state)
+    dashboardHandler.editCategory(state)
   }
 }

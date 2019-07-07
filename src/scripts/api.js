@@ -22,5 +22,13 @@ export const API = {
       method: "DELETE",
       headers: { "Content-Type": "application/json" }
     });
+  },
+
+  editData(resource, id, data) {
+    return fetch(`http://localhost:8088/${resource}/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
   }
 };
