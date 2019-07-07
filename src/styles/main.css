@@ -8,9 +8,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.3em;
 }
-input {
-  font-size: 1em;
-}
+input,
 button {
   font-size: 1em;
 }
@@ -37,7 +35,7 @@ button {
   border:1px solid darkred;
   display:flex;
   flex-flow: column wrap;
-  flex-basis: 25%;
+  min-width: 300px;
   min-height: 400px;
 }
 .card-container {

@@ -1,3 +1,5 @@
+// console.log("dom loaded")
+
 import { Comps } from "./components.js";
 import { Act } from "./actions.js";
 import { API } from "./api.js";
@@ -16,7 +18,7 @@ export const dom = {
             })
             if (!validUser[0]) alert("invalid username")
             else {
-              console.log(`Hi ${validUser[0].name}, your id is ${validUser[0].id}`)
+              console.log(`${validUser[0].name}, id = ${validUser[0].id}`)
               sessionStorage.setItem("activeUser", validUser[0].id)
               this.displayDashboard()
             }
@@ -26,6 +28,8 @@ export const dom = {
   },
 
   displayDashboard() {
+    let state = parseInt(sessionStorage.getItem("activeUser"))
+    console.log("state = ", state)
     // #container.innerhhtml = dashboard containers
     Act.render("#container", Comps.dashboard());
     Act.click("#logout-button", () => {
@@ -36,17 +40,8 @@ export const dom = {
     // Load the pre-existing categories
     API.getData("categories")
       .then(categories => {
-        console.log(categories)
-        let activeCatigories = []
-        categories.forEach(category => {
-          let user = sessionStorage.getItem("activeUser")
-          if (category.userId === 1) {
-            activeCatigories.push(category)
-          }
-        })
-        console.log(activeCatigories)
+        let activeCatigories = categories.filter(cat => cat.userId === state)
         activeCatigories.forEach(cat => Act.plus("#list-container", Comps.category(cat)))
-
       }),
     // Append create category form to #form-container
     Act.render("#form-container", Comps.categoryForm());

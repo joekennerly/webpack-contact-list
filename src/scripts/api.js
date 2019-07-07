@@ -1,4 +1,4 @@
-console.log("APIs loaded");
+// console.log("APIs loaded");
 
 export const API = {
   getData(resource, queryParams) {

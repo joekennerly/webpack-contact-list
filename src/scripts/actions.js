@@ -1,4 +1,4 @@
-console.log("Actions loaded")
+// console.log("Actions loaded")
 
 export const Act = {
   render(container, component) {
@@ -10,18 +10,17 @@ export const Act = {
   click(button, callback) {
     document.querySelector(button).addEventListener("click", callback)
   },
+  // EXPERIMENTAL - On pressing enter for text inputs
+  // enter(input, callback) {
+  //   document.querySelector(input).addEventListener("keyup", () => {
+  //     if ("keyup" === 13) callback
+  //   })
+  // },
   makeObj(param) {
     return {
       name: param,
       value: null
     }
-  },
-  // Edit Handler
-  editHandler() {
-    Act.click("#edit", event => {
-      let parentElement = event.target.parentElement;
-      console.log("edit", parentElement);
-    });
   },
   // Delete Handler
   deleteHandler() {
@@ -29,6 +28,13 @@ export const Act = {
       let parentElement = event.target.parentElement.parentElement;
       let card = event.target.parentElement;
       parentElement.removeChild(card);
+    });
+  },
+  // Edit Handler
+  editHandler() {
+    Act.click("#edit", event => {
+      let parentElement = event.target.parentElement;
+      console.log("edit", parentElement);
     });
   }
 }

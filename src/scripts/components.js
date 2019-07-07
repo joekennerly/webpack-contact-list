@@ -1,4 +1,4 @@
-console.log("Comps loaded");
+// console.log("Comps loaded");
 
 export const Comps = {
 
