@@ -5,6 +5,7 @@ import { Act } from "./actions.js";
 import { welcomeHandler } from "./handlers/welcomeHandler.js";
 import { dashboardHandler } from "./handlers/dashboardHandler.js";
 
+
 export const dom = {
   displayWelcome() {
     Act.render("#container", Comps.welcome());

@@ -4,6 +4,7 @@ import { Comps } from "../components.js";
 import { Act } from "../actions.js";
 import { dom } from "../dom.js";
 import { API } from "../api.js";
+import { cardHandler } from "./cardHandler.js";
 
 export const dashboardHandler = {
   logout() {
@@ -17,9 +18,13 @@ export const dashboardHandler = {
   loadCategories(state) {
     API.getData("categories").then(categories => {
       let activeCatigories = categories.filter(cat => cat.userId === state);
-      activeCatigories.forEach(cat =>
+      activeCatigories.forEach(cat => {
+        //Add each Category
         Act.plus("#list-container", Comps.category(cat))
-      );
+
+        cardHandler.init(state)
+        cardHandler.addCard(state)
+      });
     });
   },
 
@@ -38,6 +43,8 @@ export const dashboardHandler = {
         API.postData("categories", category).then(() => {
           document.querySelector("#list-container").innerHTML = "";
           this.loadCategories(state);
+          cardHandler.init(state)
+          cardHandler.addCard(state)
         });
       }
     });

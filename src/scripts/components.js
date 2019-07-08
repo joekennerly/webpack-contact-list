@@ -46,37 +46,35 @@ export const Comps = {
   category(obj) {
     return `
     <div class="category" id="category-${obj.id}">
-    <p><b>${obj.name} #${obj.id}</b></p>
-    <p>Total:</p>
+      <p><b>${obj.name} #${obj.id}</b></p>
 
-    <article class="card-container">
-    <div class="card">
-      <div>Name: $0.00</div>
-      <div>
-        <button>~</button><button>x</button>
-      </div>
-    </div>
-    <div class="card">
-    <div>Name: $0.00</div>
-      <div>
-        <button>~</button><button>x</button>
-      </div>
-    </div>
-    <div class="card">
-    <div>Name: $0.00</div>
-      <div>
-        <button>~</button><button>x</button>
-      </div>
-    </div>
+      <p>Total:</p>
 
-    <button>+</button>
-    </article>
+      <article class="card-container">
+        <div id="card-list"></div>
+        <div class="card-form">
+          <input type="text" id="card-name" placeholder="name"/>
+          <input type="text" id="card-amount" placeholder="$0.00"/>
+          <input type="date" id="card-date">
+        </div>
+        <button id="add-card">+</button>
+      </article>
 
-    <footer>
-    <button id="edit-${obj.id}" class="btn">edit</button>
-    <button id="del-${obj.id}" class="btn">delete</button>
-    </footer>
+      <footer>
+        <button id="edit-${obj.id}" class="btn">edit</button>
+        <button id="del-${obj.id}" class="btn">delete</button>
+      </footer>
     </div>
   `
+  },
+
+  card(obj) {
+    return `<div id="card-${obj.id}" class="card">
+      <div>${obj.name}: $ ${obj.amount}</div>
+      <div>
+        <button>~</button>
+        <button>x</button>
+      </div>
+    </div>`
   }
 }
