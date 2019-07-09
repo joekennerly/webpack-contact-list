@@ -1,1 +1,7 @@
-console.log("Your Webpack application is set up and ready to go. Please start writing code.")
+// console.log("Main loaded");
+
+import { dom } from "./dom.js";
+
+// On page load
+if(sessionStorage.length === 0) dom.displayWelcome()
+else dom.displayDashboard()

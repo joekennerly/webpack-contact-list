@@ -1,24 +1,100 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "joe"
     },
     {
       "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "jim"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 3,
+      "name": "george"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "categories": [
+    {
+      "id": 3,
+      "name": "Car",
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "name": "Misc",
+      "userId": 3
+    },
+    {
+      "name": "cats",
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "name": "Groceries",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "new",
+      "userId": 1,
+      "id": 8
+    }
+  ],
+  "cards": [
+    {
+      "name": "card1",
+      "amount": 20.99,
+      "userId": 1,
+      "catId": 1,
+      "id": 1
+    },
+    {
+      "name": "card2",
+      "amount": 4.99,
+      "userId": 3,
+      "catId": 1,
+      "id": 2
+    },
+    {
+      "name": "card3",
+      "amount": 5.59,
+      "userId": 2,
+      "catId": 2,
+      "id": 3
+    },
+    {
+      "name": "card4",
+      "amount": 5.59,
+      "userId": 2,
+      "catId": 2,
+      "id": 4
+    },
+    {
+      "name": "card5",
+      "amount": 5.59,
+      "userId": 2,
+      "catId": 2,
+      "id": 5
+    },
+    {
+      "name": "card6",
+      "amount": 5.59,
+      "userId": 1,
+      "catId": 2,
+      "id": 6
+    },
+    {
+      "name": "card7",
+      "amount": 5.59,
+      "userId": 1,
+      "catId": 2,
+      "id": 7
+    },
+    {
+      "name": "joe",
+      "userId": 1,
+      "catId": 7,
+      "id": 8
+    }
+  ]
 }
